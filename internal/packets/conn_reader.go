@@ -13,7 +13,7 @@ func ReadPackageFromConnecion(conn net.Conn) ([]byte, error) {
 
 	startBuffer := make([]byte, 5)
 
-	readedFromConn, err := io.ReadFull(conn, startBuffer)
+	readedFromConn, err := conn.Read(startBuffer)
 	if err != nil {
 		return nil, err
 	}
