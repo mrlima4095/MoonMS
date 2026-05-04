@@ -6,6 +6,7 @@ import (
 	"io"
 	"math"
 
+	"github.com/google/uuid"
 	"github.com/robogg133/MoonMS/internal/datatypes"
 )
 
@@ -106,6 +107,16 @@ func (r *Reader) ReadDouble() (float64, error) {
 	buff := make([]byte, 8)
 	_, err := io.ReadFull(r.r, buff)
 	return bit64ToFloat64(buff), err
+}
+
+func (r *Reader) ReadUUID() (uuid.UUID, error) {
+
+	uuidBuffer := make([]byte, 16)
+	if _, err := r.Read(uuidBuffer); err != nil {
+		return uuid.UUID{}, err
+	}
+
+	return uuid.ParseBytes(uuidBuffer)
 }
 
 //

@@ -6,6 +6,7 @@ import (
 	"io"
 	"math"
 
+	"github.com/google/uuid"
 	"github.com/robogg133/MoonMS/internal/datatypes"
 )
 
@@ -117,6 +118,16 @@ func (w *Writer) WriteFloat(n float32) error {
 func (w *Writer) WriteDouble(n float64) error {
 	_, err := w.buf.Write(float64ToByte(n))
 	return err
+}
+
+func (w *Writer) WriteUUID(id uuid.UUID) error {
+
+	b, err := id.MarshalBinary()
+	if err != nil {
+		return err
+	}
+
+	return w.Write(b)
 }
 
 //
