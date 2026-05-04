@@ -1,5 +1,5 @@
 //go:build !windows
 
-package shared
+package plataforms
 
 func SetHidden(path string) {}

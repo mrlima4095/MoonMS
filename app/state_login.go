@@ -41,7 +41,7 @@ func (s *LoginState) Name() string { return STATE_NAME_LOGIN }
 func (s *LoginState) Handle(sess *Session) error {
 	sess.Server.LogDebug("START STATE LOGIN")
 
-	// Registering Encryption response
+	// Registering Encryption response and login acknowledged packet
 	new := make(packets.KnownPackets)
 	new.RegisterPacket(packets.PACKET_ENCRYPTION_RESPONSE, func() packets.Packet {
 		return &packets.EncryptionResponse{}
@@ -50,6 +50,8 @@ func (s *LoginState) Handle(sess *Session) error {
 		return &packets.LoginAcknowledgedPacket{}
 	})
 	sess.KnownPkgs = new
+	//
+
 	// Starting to read basic info like uuid and username
 	buff, err := packets.ReadPackageFromConnecion(sess.Conn)
 	if err != nil {

@@ -3,8 +3,11 @@ package main
 import (
 	"crypto/rand"
 	"crypto/rsa"
+	"fmt"
 	"os"
 	"os/signal"
+	"runtime"
+	"slices"
 
 	"github.com/robogg133/MoonMS/app"
 
@@ -12,6 +15,11 @@ import (
 )
 
 func main() {
+
+	if slices.Contains(os.Args, "--version") {
+		fmt.Printf("MoonMS r%d-mc%s %s/%s\n", 1, "26.1.2", runtime.GOOS, runtime.GOARCH)
+		return
+	}
 
 	cfg := app.MinecraftServerConfig{}
 	if err := cfg.ConfigFile(); err != nil {

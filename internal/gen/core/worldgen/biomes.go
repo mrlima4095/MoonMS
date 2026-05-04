@@ -2,82 +2,83 @@
 // Generated for Minecraft 26.1.2
 package worldgen
 
-import "github.com/robogg133/MoonMS/data"
+import "github.com/robogg133/MoonMS/internal/shared/data"
 
 type Biome struct {
-		Carvers  []string
-		Downfall float32
+	Carvers  []string
+	Downfall float32
 
-		Features [][]string
+	Features [][]string
 
-		HasPreciptation bool
+	HasPreciptation bool
 
-		Spawners Spawners
+	Spawners Spawners
 
-		Temperature float32
+	Temperature float32
 
-		SpawnCosts map[data.EntityID]Costs
+	SpawnCosts map[data.EntityID]Costs
 
-		AmbientSounds   *data.Audio_AmbientSounds
-		BackgorundMusic *data.Audio_BackgroundMusic
-		MusicVolume		float32
+	AmbientSounds   *data.Audio_AmbientSounds
+	BackgorundMusic *data.Audio_BackgroundMusic
+	MusicVolume     float32
 
-		AmbientParticles    *data.Visual_AmbientParticles
-		WaterFogEndDistance *data.Visual_WaterFogEndDistance
-		FogColor            uint32
-		SkyColor            uint32
-		WaterFogColor       uint32
+	AmbientParticles    *data.Visual_AmbientParticles
+	WaterFogEndDistance *data.Visual_WaterFogEndDistance
+	FogColor            uint32
+	SkyColor            uint32
+	WaterFogColor       uint32
 
-		IncreasedFireBurnout   bool
-		SnowGolemMelts         bool
-		CanPillagerPatrolSpawn bool
+	IncreasedFireBurnout   bool
+	SnowGolemMelts         bool
+	CanPillagerPatrolSpawn bool
 
-		GrassColor      uint32
-		GrassColorModifier string
-		WaterColor      uint32
-		FoliageColor    uint32
-		DryFoliageColor uint32
+	GrassColor         uint32
+	GrassColorModifier string
+	WaterColor         uint32
+	FoliageColor       uint32
+	DryFoliageColor    uint32
 }
 
 type Mob struct {
-		Type     string
-		MaxCount uint8
-		MinCount uint8
+	Type     string
+	MaxCount uint8
+	MinCount uint8
 
-		Weight uint8
+	Weight uint8
 }
 
 type Spawners struct {
-		Ambient                  []Mob
-		Axolotls                 []Mob
-		Creature                 []Mob
-		Misc                     []Mob
-		Monster                  []Mob
-		UndergroundWaterCreature []Mob
-		WaterAmbient             []Mob
-		WaterCreature            []Mob
+	Ambient                  []Mob
+	Axolotls                 []Mob
+	Creature                 []Mob
+	Misc                     []Mob
+	Monster                  []Mob
+	UndergroundWaterCreature []Mob
+	WaterAmbient             []Mob
+	WaterCreature            []Mob
 }
 
 type Costs struct {
-		Charge       float32
-		EnergyBudget float32
+	Charge       float32
+	EnergyBudget float32
 }
+
 var Biome_badlands = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 7254527,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 9470285,
-	FoliageColor: 10387789,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: true,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               7254527,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             9470285,
+	FoliageColor:           10387789,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         true,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -95,8 +96,7 @@ var Biome_badlands = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -104,8 +104,7 @@ var Biome_badlands = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:armadillo", Weight: 6, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -119,31 +118,29 @@ var Biome_badlands = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.badlands"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.badlands"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_bamboo_jungle = Biome{
-	Temperature: 0.950000,
-	Downfall: 0.900000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7842047,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            0.950000,
+	Downfall:               0.900000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7842047,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -161,8 +158,7 @@ var Biome_bamboo_jungle = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -172,8 +168,7 @@ var Biome_bamboo_jungle = Biome{
 			{Type: "minecraft:parrot", Weight: 40, MinCount: 1, MaxCount: 2},
 			{Type: "minecraft:panda", Weight: 80, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -188,31 +183,29 @@ var Biome_bamboo_jungle = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.bamboo_jungle"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.bamboo_jungle"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_basalt_deltas = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 6840176,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               6840176,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:nether_cave",},
+	Carvers:                []string{"minecraft:nether_cave"},
 	Features: [][]string{
 		{},
 		{},
@@ -224,48 +217,52 @@ var Biome_basalt_deltas = Biome{
 		{"minecraft:basalt_blobs", "minecraft:blackstone_blobs", "minecraft:spring_delta", "minecraft:patch_fire", "minecraft:patch_soul_fire", "minecraft:glowstone_extra", "minecraft:glowstone", "minecraft:brown_mushroom_nether", "minecraft:red_mushroom_nether", "minecraft:ore_magma", "minecraft:spring_closed_double", "minecraft:ore_gold_deltas", "minecraft:ore_quartz_deltas", "minecraft:ore_ancient_debris_large", "minecraft:ore_debris_small"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:strider", Weight: 60, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:ghast", Weight: 40, MinCount: 1, MaxCount: 1},
 			{Type: "minecraft:magma_cube", Weight: 100, MinCount: 2, MaxCount: 5},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
-	AmbientSounds: &data.Audio_AmbientSounds{Additions:struct { Sound string "json:\"sound\""; TickChance float32 "json:\"tick_chance\"" }{Sound:"minecraft:ambient.basalt_deltas.additions", TickChance:0.0111}, Loop:"minecraft:ambient.basalt_deltas.loop", Mood:struct { BlockSearchExtent uint8 "json:\"block_search_extent\""; Offset float32 "json:\"offset\""; Sound string "json:\"sound\""; TickDelay float32 "json:\"tick_delay\"" }{BlockSearchExtent:0x8, Offset:2, Sound:"minecraft:ambient.basalt_deltas.mood", TickDelay:6000}},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.nether.basalt_deltas"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
-	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle:struct { Type string "json:\"type\"" }{Type:"minecraft:white_ash"}, Probability:0.118093334}},
+	AmbientSounds: &data.Audio_AmbientSounds{Additions: struct {
+		Sound      string  "json:\"sound\""
+		TickChance float32 "json:\"tick_chance\""
+	}{Sound: "minecraft:ambient.basalt_deltas.additions", TickChance: 0.0111}, Loop: "minecraft:ambient.basalt_deltas.loop", Mood: struct {
+		BlockSearchExtent uint8   "json:\"block_search_extent\""
+		Offset            float32 "json:\"offset\""
+		Sound             string  "json:\"sound\""
+		TickDelay         float32 "json:\"tick_delay\""
+	}{BlockSearchExtent: 0x8, Offset: 2, Sound: "minecraft:ambient.basalt_deltas.mood", TickDelay: 6000}},
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.nether.basalt_deltas"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
+	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle: struct {
+		Type string "json:\"type\""
+	}{Type: "minecraft:white_ash"}, Probability: 0.118093334}},
 }
 
 var Biome_beach = Biome{
-	Temperature: 0.800000,
-	Downfall: 0.400000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7907327,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.800000,
+	Downfall:               0.400000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7907327,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -283,13 +280,11 @@ var Biome_beach = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:turtle", Weight: 5, MinCount: 2, MaxCount: 5},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -303,30 +298,28 @@ var Biome_beach = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_birch_forest = Biome{
-	Temperature: 0.600000,
-	Downfall: 0.600000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8037887,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.600000,
+	Downfall:               0.600000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8037887,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -344,16 +337,14 @@ var Biome_birch_forest = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:chicken", Weight: 10, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -367,31 +358,29 @@ var Biome_birch_forest = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.forest"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.forest"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_cherry_grove = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 6141935,
-	WaterColor: 6141935,
-	GrassColor: 11983713,
-	FoliageColor: 11983713,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          6141935,
+	WaterColor:             6141935,
+	GrassColor:             11983713,
+	FoliageColor:           11983713,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -409,15 +398,13 @@ var Biome_cherry_grove = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:pig", Weight: 1, MinCount: 1, MaxCount: 2},
 			{Type: "minecraft:rabbit", Weight: 2, MinCount: 2, MaxCount: 6},
 			{Type: "minecraft:sheep", Weight: 2, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -431,31 +418,29 @@ var Biome_cherry_grove = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.cherry_grove"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.cherry_grove"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_cold_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 4020182,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             4020182,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -473,12 +458,9 @@ var Biome_cold_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -502,26 +484,26 @@ var Biome_cold_ocean = Biome{
 			{Type: "minecraft:nautilus", Weight: 2, MinCount: 1, MaxCount: 1},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_crimson_forest = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 3343107,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               3343107,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:nether_cave",},
+	Carvers:                []string{"minecraft:nether_cave"},
 	Features: [][]string{
 		{},
 		{},
@@ -535,49 +517,53 @@ var Biome_crimson_forest = Biome{
 		{"minecraft:spring_lava", "minecraft:brown_mushroom_normal", "minecraft:red_mushroom_normal", "minecraft:weeping_vines", "minecraft:crimson_fungi", "minecraft:crimson_forest_vegetation"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:strider", Weight: 60, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:zombified_piglin", Weight: 1, MinCount: 2, MaxCount: 4},
 			{Type: "minecraft:hoglin", Weight: 9, MinCount: 3, MaxCount: 4},
 			{Type: "minecraft:piglin", Weight: 5, MinCount: 3, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
-	AmbientSounds: &data.Audio_AmbientSounds{Additions:struct { Sound string "json:\"sound\""; TickChance float32 "json:\"tick_chance\"" }{Sound:"minecraft:ambient.crimson_forest.additions", TickChance:0.0111}, Loop:"minecraft:ambient.crimson_forest.loop", Mood:struct { BlockSearchExtent uint8 "json:\"block_search_extent\""; Offset float32 "json:\"offset\""; Sound string "json:\"sound\""; TickDelay float32 "json:\"tick_delay\"" }{BlockSearchExtent:0x8, Offset:2, Sound:"minecraft:ambient.crimson_forest.mood", TickDelay:6000}},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.nether.crimson_forest"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
-	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle:struct { Type string "json:\"type\"" }{Type:"minecraft:crimson_spore"}, Probability:0.025}},
+	AmbientSounds: &data.Audio_AmbientSounds{Additions: struct {
+		Sound      string  "json:\"sound\""
+		TickChance float32 "json:\"tick_chance\""
+	}{Sound: "minecraft:ambient.crimson_forest.additions", TickChance: 0.0111}, Loop: "minecraft:ambient.crimson_forest.loop", Mood: struct {
+		BlockSearchExtent uint8   "json:\"block_search_extent\""
+		Offset            float32 "json:\"offset\""
+		Sound             string  "json:\"sound\""
+		TickDelay         float32 "json:\"tick_delay\""
+	}{BlockSearchExtent: 0x8, Offset: 2, Sound: "minecraft:ambient.crimson_forest.mood", TickDelay: 6000}},
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.nether.crimson_forest"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
+	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle: struct {
+		Type string "json:\"type\""
+	}{Type: "minecraft:crimson_spore"}, Probability: 0.025}},
 }
 
 var Biome_dark_forest = Biome{
-	Temperature: 0.700000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7972607,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 8082228,
-	GrassColorModifier: "dark_forest",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.700000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7972607,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        8082228,
+	GrassColorModifier:     "dark_forest",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -595,16 +581,14 @@ var Biome_dark_forest = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:chicken", Weight: 10, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -618,31 +602,29 @@ var Biome_dark_forest = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.forest"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.forest"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_deep_cold_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 4020182,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             4020182,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -660,12 +642,9 @@ var Biome_deep_cold_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -689,26 +668,26 @@ var Biome_deep_cold_ocean = Biome{
 			{Type: "minecraft:nautilus", Weight: 2, MinCount: 1, MaxCount: 1},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_deep_dark = Biome{
-	Temperature: 0.800000,
-	Downfall: 0.400000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7907327,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.800000,
+	Downfall:               0.400000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7907327,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{},
@@ -723,43 +702,35 @@ var Biome_deep_dark = Biome{
 		{"minecraft:freeze_top_layer"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
-		Monster: []Mob{
-		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		Ambient:                  []Mob{},
+		Axolotls:                 []Mob{},
+		Creature:                 []Mob{},
+		Misc:                     []Mob{},
+		Monster:                  []Mob{},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.deep_dark"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.deep_dark"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_deep_frozen_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 3750089,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             3750089,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -777,13 +748,11 @@ var Biome_deep_frozen_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:polar_bear", Weight: 1, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -810,21 +779,21 @@ var Biome_deep_frozen_ocean = Biome{
 }
 
 var Biome_deep_lukewarm_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 267827,
-	WaterColor: 4566514,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          267827,
+	WaterColor:             4566514,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -842,12 +811,9 @@ var Biome_deep_lukewarm_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -873,26 +839,26 @@ var Biome_deep_lukewarm_ocean = Biome{
 			{Type: "minecraft:nautilus", Weight: 5, MinCount: 1, MaxCount: 1},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_deep_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -910,12 +876,9 @@ var Biome_deep_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -939,26 +902,26 @@ var Biome_deep_ocean = Biome{
 			{Type: "minecraft:nautilus", Weight: 5, MinCount: 1, MaxCount: 1},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_desert = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 7254527,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: true,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               7254527,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         true,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -976,14 +939,12 @@ var Biome_desert = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:rabbit", Weight: 12, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:camel", Weight: 1, MinCount: 1, MaxCount: 1},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 19, MinCount: 4, MaxCount: 4},
@@ -999,31 +960,29 @@ var Biome_desert = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.desert"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.desert"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_dripstone_caves = Biome{
-	Temperature: 0.800000,
-	Downfall: 0.400000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7907327,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.800000,
+	Downfall:               0.400000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7907327,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1041,12 +1000,9 @@ var Biome_dripstone_caves = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1061,71 +1017,61 @@ var Biome_dripstone_caves = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.dripstone_caves"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.dripstone_caves"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_end_barrens = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{},
-	Features: [][]string{
-	},
+	Carvers:                []string{},
+	Features:               [][]string{},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:enderman", Weight: 10, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_end_highlands = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{},
+	Carvers:                []string{},
 	Features: [][]string{
 		{},
 		{},
@@ -1139,83 +1085,68 @@ var Biome_end_highlands = Biome{
 		{"minecraft:chorus_plant"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:enderman", Weight: 10, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_end_midlands = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{},
-	Features: [][]string{
-	},
+	Carvers:                []string{},
+	Features:               [][]string{},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:enderman", Weight: 10, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_eroded_badlands = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 7254527,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 9470285,
-	FoliageColor: 10387789,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: true,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               7254527,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             9470285,
+	FoliageColor:           10387789,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         true,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1233,8 +1164,7 @@ var Biome_eroded_badlands = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -1242,8 +1172,7 @@ var Biome_eroded_badlands = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:armadillo", Weight: 6, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1257,31 +1186,29 @@ var Biome_eroded_badlands = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.badlands"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.badlands"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_flower_forest = Biome{
-	Temperature: 0.700000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7972607,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.700000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7972607,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1299,8 +1226,7 @@ var Biome_flower_forest = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -1308,8 +1234,7 @@ var Biome_flower_forest = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:rabbit", Weight: 4, MinCount: 2, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1323,31 +1248,29 @@ var Biome_flower_forest = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.flower_forest"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.flower_forest"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_forest = Biome{
-	Temperature: 0.700000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7972607,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.700000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7972607,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1365,8 +1288,7 @@ var Biome_forest = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -1374,8 +1296,7 @@ var Biome_forest = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:wolf", Weight: 5, MinCount: 4, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1389,31 +1310,29 @@ var Biome_forest = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.forest"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.forest"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_frozen_ocean = Biome{
-	Temperature: 0.000000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8364543,
-	WaterFogColor: 0,
-	WaterColor: 3750089,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.000000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8364543,
+	WaterFogColor:          0,
+	WaterColor:             3750089,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1431,13 +1350,11 @@ var Biome_frozen_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:polar_bear", Weight: 1, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1464,21 +1381,21 @@ var Biome_frozen_ocean = Biome{
 }
 
 var Biome_frozen_peaks = Biome{
-	Temperature: -0.700000,
-	Downfall: 0.900000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8756735,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            -0.700000,
+	Downfall:               0.900000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8756735,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1496,13 +1413,11 @@ var Biome_frozen_peaks = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:goat", Weight: 5, MinCount: 1, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1516,31 +1431,29 @@ var Biome_frozen_peaks = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.frozen_peaks"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.frozen_peaks"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_frozen_river = Biome{
-	Temperature: 0.000000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8364543,
-	WaterFogColor: 0,
-	WaterColor: 3750089,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.000000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8364543,
+	WaterFogColor:          0,
+	WaterColor:             3750089,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1558,12 +1471,9 @@ var Biome_frozen_river = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1585,26 +1495,26 @@ var Biome_frozen_river = Biome{
 			{Type: "minecraft:squid", Weight: 2, MinCount: 1, MaxCount: 4},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_grove = Biome{
-	Temperature: -0.200000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8495359,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            -0.200000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8495359,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1622,15 +1532,13 @@ var Biome_grove = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:wolf", Weight: 1, MinCount: 1, MaxCount: 1},
 			{Type: "minecraft:rabbit", Weight: 8, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:fox", Weight: 4, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1644,31 +1552,29 @@ var Biome_grove = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.grove"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.grove"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_ice_spikes = Biome{
-	Temperature: 0.000000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8364543,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.000000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8364543,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1686,14 +1592,12 @@ var Biome_ice_spikes = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:rabbit", Weight: 10, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:polar_bear", Weight: 1, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1708,30 +1612,28 @@ var Biome_ice_spikes = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_jagged_peaks = Biome{
-	Temperature: -0.700000,
-	Downfall: 0.900000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8756735,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            -0.700000,
+	Downfall:               0.900000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8756735,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1749,13 +1651,11 @@ var Biome_jagged_peaks = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:goat", Weight: 5, MinCount: 1, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1769,31 +1669,29 @@ var Biome_jagged_peaks = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.jagged_peaks"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.jagged_peaks"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_jungle = Biome{
-	Temperature: 0.950000,
-	Downfall: 0.900000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7842047,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            0.950000,
+	Downfall:               0.900000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7842047,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1811,8 +1709,7 @@ var Biome_jungle = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -1822,8 +1719,7 @@ var Biome_jungle = Biome{
 			{Type: "minecraft:parrot", Weight: 40, MinCount: 1, MaxCount: 2},
 			{Type: "minecraft:panda", Weight: 1, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1838,31 +1734,29 @@ var Biome_jungle = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.jungle"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.jungle"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_lukewarm_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 267827,
-	WaterColor: 4566514,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          267827,
+	WaterColor:             4566514,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1880,12 +1774,9 @@ var Biome_lukewarm_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1911,26 +1802,26 @@ var Biome_lukewarm_ocean = Biome{
 			{Type: "minecraft:nautilus", Weight: 5, MinCount: 1, MaxCount: 1},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_lush_caves = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -1951,10 +1842,8 @@ var Biome_lush_caves = Biome{
 		Axolotls: []Mob{
 			{Type: "minecraft:axolotl", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -1971,29 +1860,28 @@ var Biome_lush_caves = Biome{
 		WaterAmbient: []Mob{
 			{Type: "minecraft:tropical_fish", Weight: 25, MinCount: 8, MaxCount: 8},
 		},
-		WaterCreature: []Mob{
-		},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.lush_caves"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.lush_caves"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_mangrove_swamp = Biome{
-	Temperature: 0.800000,
-	Downfall: 0.900000,
-	HasPreciptation: true,
-	FogColor: 12638463,
-	SkyColor: 7907327,
-	WaterFogColor: 5077600,
-	WaterColor: 3832426,
-	GrassColor: 0,
-	FoliageColor: 9285927,
-	DryFoliageColor: 8082228,
-	GrassColorModifier: "swamp",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            0.800000,
+	Downfall:               0.900000,
+	HasPreciptation:        true,
+	FogColor:               12638463,
+	SkyColor:               7907327,
+	WaterFogColor:          5077600,
+	WaterColor:             3832426,
+	GrassColor:             0,
+	FoliageColor:           9285927,
+	DryFoliageColor:        8082228,
+	GrassColorModifier:     "swamp",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2011,13 +1899,11 @@ var Biome_mangrove_swamp = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:frog", Weight: 10, MinCount: 2, MaxCount: 5},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2036,30 +1922,29 @@ var Biome_mangrove_swamp = Biome{
 		WaterAmbient: []Mob{
 			{Type: "minecraft:tropical_fish", Weight: 25, MinCount: 8, MaxCount: 8},
 		},
-		WaterCreature: []Mob{
-		},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.swamp"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
-	WaterFogEndDistance: &data.Visual_WaterFogEndDistance{Argument:0.85, Modifier:"multiply"},
+	BackgorundMusic:     &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.swamp"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:         100.000000,
+	WaterFogEndDistance: &data.Visual_WaterFogEndDistance{Argument: 0.85, Modifier: "multiply"},
 }
 
 var Biome_meadow = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 937679,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             937679,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2077,15 +1962,13 @@ var Biome_meadow = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:donkey", Weight: 1, MinCount: 1, MaxCount: 2},
 			{Type: "minecraft:rabbit", Weight: 2, MinCount: 2, MaxCount: 6},
 			{Type: "minecraft:sheep", Weight: 2, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2099,31 +1982,29 @@ var Biome_meadow = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.meadow"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.meadow"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_mushroom_fields = Biome{
-	Temperature: 0.900000,
-	Downfall: 1.000000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7842047,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            0.900000,
+	Downfall:               1.000000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7842047,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2141,42 +2022,37 @@ var Biome_mushroom_fields = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:mooshroom", Weight: 8, MinCount: 4, MaxCount: 8},
 		},
-		Misc: []Mob{
-		},
-		Monster: []Mob{
-		},
+		Misc:    []Mob{},
+		Monster: []Mob{},
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_nether_wastes = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 3344392,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               3344392,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:nether_cave",},
+	Carvers:                []string{"minecraft:nether_cave"},
 	Features: [][]string{
 		{},
 		{},
@@ -2190,15 +2066,12 @@ var Biome_nether_wastes = Biome{
 		{"minecraft:spring_lava", "minecraft:brown_mushroom_normal", "minecraft:red_mushroom_normal"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:strider", Weight: 60, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:ghast", Weight: 50, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombified_piglin", Weight: 100, MinCount: 4, MaxCount: 4},
@@ -2206,34 +2079,39 @@ var Biome_nether_wastes = Biome{
 			{Type: "minecraft:enderman", Weight: 1, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:piglin", Weight: 15, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
-	AmbientSounds: &data.Audio_AmbientSounds{Additions:struct { Sound string "json:\"sound\""; TickChance float32 "json:\"tick_chance\"" }{Sound:"minecraft:ambient.nether_wastes.additions", TickChance:0.0111}, Loop:"minecraft:ambient.nether_wastes.loop", Mood:struct { BlockSearchExtent uint8 "json:\"block_search_extent\""; Offset float32 "json:\"offset\""; Sound string "json:\"sound\""; TickDelay float32 "json:\"tick_delay\"" }{BlockSearchExtent:0x8, Offset:2, Sound:"minecraft:ambient.nether_wastes.mood", TickDelay:6000}},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.nether.nether_wastes"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	AmbientSounds: &data.Audio_AmbientSounds{Additions: struct {
+		Sound      string  "json:\"sound\""
+		TickChance float32 "json:\"tick_chance\""
+	}{Sound: "minecraft:ambient.nether_wastes.additions", TickChance: 0.0111}, Loop: "minecraft:ambient.nether_wastes.loop", Mood: struct {
+		BlockSearchExtent uint8   "json:\"block_search_extent\""
+		Offset            float32 "json:\"offset\""
+		Sound             string  "json:\"sound\""
+		TickDelay         float32 "json:\"tick_delay\""
+	}{BlockSearchExtent: 0x8, Offset: 2, Sound: "minecraft:ambient.nether_wastes.mood", TickDelay: 6000}},
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.nether.nether_wastes"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2251,12 +2129,9 @@ var Biome_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2280,26 +2155,26 @@ var Biome_ocean = Biome{
 			{Type: "minecraft:nautilus", Weight: 5, MinCount: 1, MaxCount: 1},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_old_growth_birch_forest = Biome{
-	Temperature: 0.600000,
-	Downfall: 0.600000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8037887,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.600000,
+	Downfall:               0.600000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8037887,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2317,16 +2192,14 @@ var Biome_old_growth_birch_forest = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:chicken", Weight: 10, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2340,31 +2213,29 @@ var Biome_old_growth_birch_forest = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.forest"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.forest"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_old_growth_pine_taiga = Biome{
-	Temperature: 0.300000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8168447,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.300000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8168447,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2382,8 +2253,7 @@ var Biome_old_growth_pine_taiga = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -2393,8 +2263,7 @@ var Biome_old_growth_pine_taiga = Biome{
 			{Type: "minecraft:rabbit", Weight: 4, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:fox", Weight: 8, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 100, MinCount: 4, MaxCount: 4},
@@ -2408,31 +2277,29 @@ var Biome_old_growth_pine_taiga = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.old_growth_taiga"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.old_growth_taiga"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_old_growth_spruce_taiga = Biome{
-	Temperature: 0.250000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8233983,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.250000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8233983,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2450,8 +2317,7 @@ var Biome_old_growth_spruce_taiga = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -2461,8 +2327,7 @@ var Biome_old_growth_spruce_taiga = Biome{
 			{Type: "minecraft:rabbit", Weight: 4, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:fox", Weight: 8, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2476,31 +2341,29 @@ var Biome_old_growth_spruce_taiga = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.old_growth_taiga"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.old_growth_taiga"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_pale_garden = Biome{
-	Temperature: 0.700000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 8484720,
-	SkyColor: 12171705,
-	WaterFogColor: 5597568,
-	WaterColor: 7768221,
-	GrassColor: 7832178,
-	FoliageColor: 8883574,
-	DryFoliageColor: 10528412,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.700000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               8484720,
+	SkyColor:               12171705,
+	WaterFogColor:          5597568,
+	WaterColor:             7768221,
+	GrassColor:             7832178,
+	FoliageColor:           8883574,
+	DryFoliageColor:        10528412,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2518,12 +2381,9 @@ var Biome_pale_garden = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2537,31 +2397,29 @@ var Biome_pale_garden = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 0.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     0.000000,
 }
 
 var Biome_plains = Biome{
-	Temperature: 0.800000,
-	Downfall: 0.400000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7907327,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.800000,
+	Downfall:               0.400000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7907327,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2579,8 +2437,7 @@ var Biome_plains = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -2589,8 +2446,7 @@ var Biome_plains = Biome{
 			{Type: "minecraft:horse", Weight: 5, MinCount: 2, MaxCount: 6},
 			{Type: "minecraft:donkey", Weight: 1, MinCount: 1, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 90, MinCount: 4, MaxCount: 4},
@@ -2605,30 +2461,28 @@ var Biome_plains = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_river = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2646,12 +2500,9 @@ var Biome_river = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2673,26 +2524,26 @@ var Biome_river = Biome{
 			{Type: "minecraft:squid", Weight: 2, MinCount: 1, MaxCount: 4},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_savanna = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 7254527,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: true,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               7254527,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         true,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2710,8 +2561,7 @@ var Biome_savanna = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -2721,8 +2571,7 @@ var Biome_savanna = Biome{
 			{Type: "minecraft:donkey", Weight: 1, MinCount: 1, MaxCount: 1},
 			{Type: "minecraft:armadillo", Weight: 10, MinCount: 2, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 90, MinCount: 4, MaxCount: 4},
@@ -2737,30 +2586,28 @@ var Biome_savanna = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_savanna_plateau = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 7254527,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: true,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               7254527,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         true,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2778,8 +2625,7 @@ var Biome_savanna_plateau = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -2791,8 +2637,7 @@ var Biome_savanna_plateau = Biome{
 			{Type: "minecraft:llama", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:wolf", Weight: 8, MinCount: 4, MaxCount: 8},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 90, MinCount: 4, MaxCount: 4},
@@ -2807,71 +2652,62 @@ var Biome_savanna_plateau = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_small_end_islands = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{},
+	Carvers:                []string{},
 	Features: [][]string{
 		{"minecraft:end_island_decorated"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:enderman", Weight: 10, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_snowy_beach = Biome{
-	Temperature: 0.050000,
-	Downfall: 0.300000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8364543,
-	WaterFogColor: 0,
-	WaterColor: 4020182,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.050000,
+	Downfall:               0.300000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8364543,
+	WaterFogColor:          0,
+	WaterColor:             4020182,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2889,12 +2725,9 @@ var Biome_snowy_beach = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -2908,30 +2741,28 @@ var Biome_snowy_beach = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_snowy_plains = Biome{
-	Temperature: 0.000000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8364543,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.000000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8364543,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -2949,14 +2780,12 @@ var Biome_snowy_plains = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:rabbit", Weight: 10, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:polar_bear", Weight: 1, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 90, MinCount: 4, MaxCount: 4},
@@ -2972,30 +2801,28 @@ var Biome_snowy_plains = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_snowy_slopes = Biome{
-	Temperature: -0.300000,
-	Downfall: 0.900000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8560639,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            -0.300000,
+	Downfall:               0.900000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8560639,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3013,14 +2840,12 @@ var Biome_snowy_slopes = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:rabbit", Weight: 4, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:goat", Weight: 5, MinCount: 1, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3034,31 +2859,29 @@ var Biome_snowy_slopes = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.snowy_slopes"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.snowy_slopes"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_snowy_taiga = Biome{
-	Temperature: -0.500000,
-	Downfall: 0.400000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8625919,
-	WaterFogColor: 0,
-	WaterColor: 4020182,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            -0.500000,
+	Downfall:               0.400000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8625919,
+	WaterFogColor:          0,
+	WaterColor:             4020182,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3076,8 +2899,7 @@ var Biome_snowy_taiga = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3087,8 +2909,7 @@ var Biome_snowy_taiga = Biome{
 			{Type: "minecraft:rabbit", Weight: 4, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:fox", Weight: 8, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3102,30 +2923,28 @@ var Biome_snowy_taiga = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_soul_sand_valley = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 1787717,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               1787717,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:nether_cave",},
+	Carvers:                []string{"minecraft:nether_cave"},
 	Features: [][]string{
 		{},
 		{},
@@ -3139,49 +2958,53 @@ var Biome_soul_sand_valley = Biome{
 		{"minecraft:spring_lava"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:strider", Weight: 60, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:skeleton", Weight: 20, MinCount: 5, MaxCount: 5},
 			{Type: "minecraft:ghast", Weight: 50, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:enderman", Weight: 1, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
-	AmbientSounds: &data.Audio_AmbientSounds{Additions:struct { Sound string "json:\"sound\""; TickChance float32 "json:\"tick_chance\"" }{Sound:"minecraft:ambient.soul_sand_valley.additions", TickChance:0.0111}, Loop:"minecraft:ambient.soul_sand_valley.loop", Mood:struct { BlockSearchExtent uint8 "json:\"block_search_extent\""; Offset float32 "json:\"offset\""; Sound string "json:\"sound\""; TickDelay float32 "json:\"tick_delay\"" }{BlockSearchExtent:0x8, Offset:2, Sound:"minecraft:ambient.soul_sand_valley.mood", TickDelay:6000}},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.nether.soul_sand_valley"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
-	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle:struct { Type string "json:\"type\"" }{Type:"minecraft:ash"}, Probability:0.00625}},
+	AmbientSounds: &data.Audio_AmbientSounds{Additions: struct {
+		Sound      string  "json:\"sound\""
+		TickChance float32 "json:\"tick_chance\""
+	}{Sound: "minecraft:ambient.soul_sand_valley.additions", TickChance: 0.0111}, Loop: "minecraft:ambient.soul_sand_valley.loop", Mood: struct {
+		BlockSearchExtent uint8   "json:\"block_search_extent\""
+		Offset            float32 "json:\"offset\""
+		Sound             string  "json:\"sound\""
+		TickDelay         float32 "json:\"tick_delay\""
+	}{BlockSearchExtent: 0x8, Offset: 2, Sound: "minecraft:ambient.soul_sand_valley.mood", TickDelay: 6000}},
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.nether.soul_sand_valley"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
+	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle: struct {
+		Type string "json:\"type\""
+	}{Type: "minecraft:ash"}, Probability: 0.00625}},
 }
 
 var Biome_sparse_jungle = Biome{
-	Temperature: 0.950000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7842047,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.950000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7842047,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3199,8 +3022,7 @@ var Biome_sparse_jungle = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3209,8 +3031,7 @@ var Biome_sparse_jungle = Biome{
 			{Type: "minecraft:chicken", Weight: 10, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:wolf", Weight: 8, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3224,31 +3045,29 @@ var Biome_sparse_jungle = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.sparse_jungle"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.sparse_jungle"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_stony_peaks = Biome{
-	Temperature: 1.000000,
-	Downfall: 0.300000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7776511,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            1.000000,
+	Downfall:               0.300000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7776511,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3266,12 +3085,9 @@ var Biome_stony_peaks = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3285,31 +3101,29 @@ var Biome_stony_peaks = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.stony_peaks"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.stony_peaks"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_stony_shore = Biome{
-	Temperature: 0.200000,
-	Downfall: 0.300000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8233727,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.200000,
+	Downfall:               0.300000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8233727,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3327,12 +3141,9 @@ var Biome_stony_shore = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3346,30 +3157,28 @@ var Biome_stony_shore = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_sunflower_plains = Biome{
-	Temperature: 0.800000,
-	Downfall: 0.400000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7907327,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.800000,
+	Downfall:               0.400000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7907327,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3387,8 +3196,7 @@ var Biome_sunflower_plains = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3397,8 +3205,7 @@ var Biome_sunflower_plains = Biome{
 			{Type: "minecraft:horse", Weight: 5, MinCount: 2, MaxCount: 6},
 			{Type: "minecraft:donkey", Weight: 1, MinCount: 1, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 90, MinCount: 4, MaxCount: 4},
@@ -3413,30 +3220,28 @@ var Biome_sunflower_plains = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_swamp = Biome{
-	Temperature: 0.800000,
-	Downfall: 0.900000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 7907327,
-	WaterFogColor: 2302743,
-	WaterColor: 6388580,
-	GrassColor: 0,
-	FoliageColor: 6975545,
-	DryFoliageColor: 8082228,
-	GrassColorModifier: "swamp",
-	IncreasedFireBurnout: true,
-	SnowGolemMelts: false,
+	Temperature:            0.800000,
+	Downfall:               0.900000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               7907327,
+	WaterFogColor:          2302743,
+	WaterColor:             6388580,
+	GrassColor:             0,
+	FoliageColor:           6975545,
+	DryFoliageColor:        8082228,
+	GrassColorModifier:     "swamp",
+	IncreasedFireBurnout:   true,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3454,8 +3259,7 @@ var Biome_swamp = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3463,8 +3267,7 @@ var Biome_swamp = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:frog", Weight: 10, MinCount: 2, MaxCount: 5},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3480,32 +3283,30 @@ var Biome_swamp = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.swamp"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
-	WaterFogEndDistance: &data.Visual_WaterFogEndDistance{Argument:0.85, Modifier:"multiply"},
+	BackgorundMusic:     &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.swamp"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:         100.000000,
+	WaterFogEndDistance: &data.Visual_WaterFogEndDistance{Argument: 0.85, Modifier: "multiply"},
 }
 
 var Biome_taiga = Biome{
-	Temperature: 0.250000,
-	Downfall: 0.800000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8233983,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.250000,
+	Downfall:               0.800000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8233983,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3523,8 +3324,7 @@ var Biome_taiga = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3534,8 +3334,7 @@ var Biome_taiga = Biome{
 			{Type: "minecraft:rabbit", Weight: 4, MinCount: 2, MaxCount: 3},
 			{Type: "minecraft:fox", Weight: 8, MinCount: 2, MaxCount: 4},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3549,30 +3348,28 @@ var Biome_taiga = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_the_end = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{},
+	Carvers:                []string{},
 	Features: [][]string{
 		{},
 		{},
@@ -3587,43 +3384,36 @@ var Biome_the_end = Biome{
 		{"minecraft:end_platform"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:enderman", Weight: 10, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_the_void = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{},
+	Carvers:                []string{},
 	Features: [][]string{
 		{},
 		{},
@@ -3638,42 +3428,34 @@ var Biome_the_void = Biome{
 		{"minecraft:void_start_platform"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
-		Monster: []Mob{
-		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		Ambient:                  []Mob{},
+		Axolotls:                 []Mob{},
+		Creature:                 []Mob{},
+		Misc:                     []Mob{},
+		Monster:                  []Mob{},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_warm_ocean = Biome{
-	Temperature: 0.500000,
-	Downfall: 0.500000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8103167,
-	WaterFogColor: 270131,
-	WaterColor: 4445678,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.500000,
+	Downfall:               0.500000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8103167,
+	WaterFogColor:          270131,
+	WaterColor:             4445678,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3691,12 +3473,9 @@ var Biome_warm_ocean = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
-		Creature: []Mob{
-		},
-		Misc: []Mob{
-		},
+		Axolotls: []Mob{},
+		Creature: []Mob{},
+		Misc:     []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:drowned", Weight: 5, MinCount: 1, MaxCount: 1},
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
@@ -3721,26 +3500,26 @@ var Biome_warm_ocean = Biome{
 			{Type: "minecraft:dolphin", Weight: 2, MinCount: 1, MaxCount: 2},
 		},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.game"}, Creative:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.creative"}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.game"}, Creative: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.creative"}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
 var Biome_warped_forest = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 1705242,
-	SkyColor: 0,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               1705242,
+	SkyColor:               0,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:nether_cave",},
+	Carvers:                []string{"minecraft:nether_cave"},
 	Features: [][]string{
 		{},
 		{},
@@ -3754,47 +3533,51 @@ var Biome_warped_forest = Biome{
 		{"minecraft:spring_lava", "minecraft:brown_mushroom_normal", "minecraft:red_mushroom_normal", "minecraft:warped_fungi", "minecraft:warped_forest_vegetation", "minecraft:nether_sprouts", "minecraft:twisting_vines"},
 	},
 	Spawners: Spawners{
-		Ambient: []Mob{
-		},
-		Axolotls: []Mob{
-		},
+		Ambient:  []Mob{},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:strider", Weight: 60, MinCount: 1, MaxCount: 2},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:enderman", Weight: 1, MinCount: 4, MaxCount: 4},
 		},
-		UndergroundWaterCreature: []Mob{
-		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		UndergroundWaterCreature: []Mob{},
+		WaterAmbient:             []Mob{},
+		WaterCreature:            []Mob{},
 	},
-	AmbientSounds: &data.Audio_AmbientSounds{Additions:struct { Sound string "json:\"sound\""; TickChance float32 "json:\"tick_chance\"" }{Sound:"minecraft:ambient.warped_forest.additions", TickChance:0.0111}, Loop:"minecraft:ambient.warped_forest.loop", Mood:struct { BlockSearchExtent uint8 "json:\"block_search_extent\""; Offset float32 "json:\"offset\""; Sound string "json:\"sound\""; TickDelay float32 "json:\"tick_delay\"" }{BlockSearchExtent:0x8, Offset:2, Sound:"minecraft:ambient.warped_forest.mood", TickDelay:6000}},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.nether.warped_forest"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
-	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle:struct { Type string "json:\"type\"" }{Type:"minecraft:warped_spore"}, Probability:0.01428}},
+	AmbientSounds: &data.Audio_AmbientSounds{Additions: struct {
+		Sound      string  "json:\"sound\""
+		TickChance float32 "json:\"tick_chance\""
+	}{Sound: "minecraft:ambient.warped_forest.additions", TickChance: 0.0111}, Loop: "minecraft:ambient.warped_forest.loop", Mood: struct {
+		BlockSearchExtent uint8   "json:\"block_search_extent\""
+		Offset            float32 "json:\"offset\""
+		Sound             string  "json:\"sound\""
+		TickDelay         float32 "json:\"tick_delay\""
+	}{BlockSearchExtent: 0x8, Offset: 2, Sound: "minecraft:ambient.warped_forest.mood", TickDelay: 6000}},
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.nether.warped_forest"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
+	AmbientParticles: &data.Visual_AmbientParticles{data.Particle{Particle: struct {
+		Type string "json:\"type\""
+	}{Type: "minecraft:warped_spore"}, Probability: 0.01428}},
 }
 
 var Biome_windswept_forest = Biome{
-	Temperature: 0.200000,
-	Downfall: 0.300000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8233727,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.200000,
+	Downfall:               0.300000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8233727,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3812,8 +3595,7 @@ var Biome_windswept_forest = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3821,8 +3603,7 @@ var Biome_windswept_forest = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:llama", Weight: 5, MinCount: 4, MaxCount: 6},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3836,30 +3617,28 @@ var Biome_windswept_forest = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_windswept_gravelly_hills = Biome{
-	Temperature: 0.200000,
-	Downfall: 0.300000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8233727,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.200000,
+	Downfall:               0.300000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8233727,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3877,8 +3656,7 @@ var Biome_windswept_gravelly_hills = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3886,8 +3664,7 @@ var Biome_windswept_gravelly_hills = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:llama", Weight: 5, MinCount: 4, MaxCount: 6},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3901,30 +3678,28 @@ var Biome_windswept_gravelly_hills = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_windswept_hills = Biome{
-	Temperature: 0.200000,
-	Downfall: 0.300000,
-	HasPreciptation: true,
-	FogColor: 0,
-	SkyColor: 8233727,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: false,
+	Temperature:            0.200000,
+	Downfall:               0.300000,
+	HasPreciptation:        true,
+	FogColor:               0,
+	SkyColor:               8233727,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         false,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -3942,8 +3717,7 @@ var Biome_windswept_hills = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -3951,8 +3725,7 @@ var Biome_windswept_hills = Biome{
 			{Type: "minecraft:cow", Weight: 8, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:llama", Weight: 5, MinCount: 4, MaxCount: 6},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -3966,30 +3739,28 @@ var Biome_windswept_hills = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_windswept_savanna = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 7254527,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 0,
-	FoliageColor: 0,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: true,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               7254527,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             0,
+	FoliageColor:           0,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         true,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -4007,8 +3778,7 @@ var Biome_windswept_savanna = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -4018,8 +3788,7 @@ var Biome_windswept_savanna = Biome{
 			{Type: "minecraft:donkey", Weight: 1, MinCount: 1, MaxCount: 1},
 			{Type: "minecraft:armadillo", Weight: 10, MinCount: 2, MaxCount: 3},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 90, MinCount: 4, MaxCount: 4},
@@ -4034,30 +3803,28 @@ var Biome_windswept_savanna = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
 	MusicVolume: 100.000000,
 }
 
 var Biome_wooded_badlands = Biome{
-	Temperature: 2.000000,
-	Downfall: 0.000000,
-	HasPreciptation: false,
-	FogColor: 0,
-	SkyColor: 7254527,
-	WaterFogColor: 0,
-	WaterColor: 4159204,
-	GrassColor: 9470285,
-	FoliageColor: 10387789,
-	DryFoliageColor: 0,
-	GrassColorModifier: "",
-	IncreasedFireBurnout: false,
-	SnowGolemMelts: true,
+	Temperature:            2.000000,
+	Downfall:               0.000000,
+	HasPreciptation:        false,
+	FogColor:               0,
+	SkyColor:               7254527,
+	WaterFogColor:          0,
+	WaterColor:             4159204,
+	GrassColor:             9470285,
+	FoliageColor:           10387789,
+	DryFoliageColor:        0,
+	GrassColorModifier:     "",
+	IncreasedFireBurnout:   false,
+	SnowGolemMelts:         true,
 	CanPillagerPatrolSpawn: false,
-	Carvers: []string{"minecraft:cave","minecraft:cave_extra_underground","minecraft:canyon",},
+	Carvers:                []string{"minecraft:cave", "minecraft:cave_extra_underground", "minecraft:canyon"},
 	Features: [][]string{
 		{},
 		{"minecraft:lake_lava_underground", "minecraft:lake_lava_surface"},
@@ -4075,8 +3842,7 @@ var Biome_wooded_badlands = Biome{
 		Ambient: []Mob{
 			{Type: "minecraft:bat", Weight: 10, MinCount: 8, MaxCount: 8},
 		},
-		Axolotls: []Mob{
-		},
+		Axolotls: []Mob{},
 		Creature: []Mob{
 			{Type: "minecraft:sheep", Weight: 12, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:pig", Weight: 10, MinCount: 4, MaxCount: 4},
@@ -4085,8 +3851,7 @@ var Biome_wooded_badlands = Biome{
 			{Type: "minecraft:armadillo", Weight: 6, MinCount: 1, MaxCount: 2},
 			{Type: "minecraft:wolf", Weight: 2, MinCount: 4, MaxCount: 8},
 		},
-		Misc: []Mob{
-		},
+		Misc: []Mob{},
 		Monster: []Mob{
 			{Type: "minecraft:spider", Weight: 100, MinCount: 4, MaxCount: 4},
 			{Type: "minecraft:zombie", Weight: 95, MinCount: 4, MaxCount: 4},
@@ -4100,13 +3865,11 @@ var Biome_wooded_badlands = Biome{
 		UndergroundWaterCreature: []Mob{
 			{Type: "minecraft:glow_squid", Weight: 10, MinCount: 4, MaxCount: 6},
 		},
-		WaterAmbient: []Mob{
-		},
-		WaterCreature: []Mob{
-		},
+		WaterAmbient:  []Mob{},
+		WaterCreature: []Mob{},
 	},
-	BackgorundMusic: &data.Audio_BackgroundMusic{Default:data.BackgroundMusic{MaxDelay:24000, MinDelay:12000, Sound:"minecraft:music.overworld.badlands"}, Creative:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}, UnderWater:data.BackgroundMusic{MaxDelay:0, MinDelay:0, Sound:""}},
-	MusicVolume: 100.000000,
+	BackgorundMusic: &data.Audio_BackgroundMusic{Default: data.BackgroundMusic{MaxDelay: 24000, MinDelay: 12000, Sound: "minecraft:music.overworld.badlands"}, Creative: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}, UnderWater: data.BackgroundMusic{MaxDelay: 0, MinDelay: 0, Sound: ""}},
+	MusicVolume:     100.000000,
 }
 
-var KnownBiomes = []string{"minecraft:badlands","minecraft:bamboo_jungle","minecraft:basalt_deltas","minecraft:beach","minecraft:birch_forest","minecraft:cherry_grove","minecraft:cold_ocean","minecraft:crimson_forest","minecraft:dark_forest","minecraft:deep_cold_ocean","minecraft:deep_dark","minecraft:deep_frozen_ocean","minecraft:deep_lukewarm_ocean","minecraft:deep_ocean","minecraft:desert","minecraft:dripstone_caves","minecraft:end_barrens","minecraft:end_highlands","minecraft:end_midlands","minecraft:eroded_badlands","minecraft:flower_forest","minecraft:forest","minecraft:frozen_ocean","minecraft:frozen_peaks","minecraft:frozen_river","minecraft:grove","minecraft:ice_spikes","minecraft:jagged_peaks","minecraft:jungle","minecraft:lukewarm_ocean","minecraft:lush_caves","minecraft:mangrove_swamp","minecraft:meadow","minecraft:mushroom_fields","minecraft:nether_wastes","minecraft:ocean","minecraft:old_growth_birch_forest","minecraft:old_growth_pine_taiga","minecraft:old_growth_spruce_taiga","minecraft:pale_garden","minecraft:plains","minecraft:river","minecraft:savanna","minecraft:savanna_plateau","minecraft:small_end_islands","minecraft:snowy_beach","minecraft:snowy_plains","minecraft:snowy_slopes","minecraft:snowy_taiga","minecraft:soul_sand_valley","minecraft:sparse_jungle","minecraft:stony_peaks","minecraft:stony_shore","minecraft:sunflower_plains","minecraft:swamp","minecraft:taiga","minecraft:the_end","minecraft:the_void","minecraft:warm_ocean","minecraft:warped_forest","minecraft:windswept_forest","minecraft:windswept_gravelly_hills","minecraft:windswept_hills","minecraft:windswept_savanna","minecraft:wooded_badlands",}
+var KnownBiomes = []string{"minecraft:badlands", "minecraft:bamboo_jungle", "minecraft:basalt_deltas", "minecraft:beach", "minecraft:birch_forest", "minecraft:cherry_grove", "minecraft:cold_ocean", "minecraft:crimson_forest", "minecraft:dark_forest", "minecraft:deep_cold_ocean", "minecraft:deep_dark", "minecraft:deep_frozen_ocean", "minecraft:deep_lukewarm_ocean", "minecraft:deep_ocean", "minecraft:desert", "minecraft:dripstone_caves", "minecraft:end_barrens", "minecraft:end_highlands", "minecraft:end_midlands", "minecraft:eroded_badlands", "minecraft:flower_forest", "minecraft:forest", "minecraft:frozen_ocean", "minecraft:frozen_peaks", "minecraft:frozen_river", "minecraft:grove", "minecraft:ice_spikes", "minecraft:jagged_peaks", "minecraft:jungle", "minecraft:lukewarm_ocean", "minecraft:lush_caves", "minecraft:mangrove_swamp", "minecraft:meadow", "minecraft:mushroom_fields", "minecraft:nether_wastes", "minecraft:ocean", "minecraft:old_growth_birch_forest", "minecraft:old_growth_pine_taiga", "minecraft:old_growth_spruce_taiga", "minecraft:pale_garden", "minecraft:plains", "minecraft:river", "minecraft:savanna", "minecraft:savanna_plateau", "minecraft:small_end_islands", "minecraft:snowy_beach", "minecraft:snowy_plains", "minecraft:snowy_slopes", "minecraft:snowy_taiga", "minecraft:soul_sand_valley", "minecraft:sparse_jungle", "minecraft:stony_peaks", "minecraft:stony_shore", "minecraft:sunflower_plains", "minecraft:swamp", "minecraft:taiga", "minecraft:the_end", "minecraft:the_void", "minecraft:warm_ocean", "minecraft:warped_forest", "minecraft:windswept_forest", "minecraft:windswept_gravelly_hills", "minecraft:windswept_hills", "minecraft:windswept_savanna", "minecraft:wooded_badlands"}

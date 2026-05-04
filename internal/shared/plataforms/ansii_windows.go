@@ -1,11 +1,11 @@
 //go:build windows
 
-package app
+package plataforms
 
 import "golang.org/x/sys/windows"
 
 // enable Enables ANSII Escape sequence in the current terminal window
-func enable() {
+func EnableANSII() {
 	handle := windows.Handle(windows.Stdout)
 	var mode uint32
 	windows.GetConsoleMode(handle, &mode)

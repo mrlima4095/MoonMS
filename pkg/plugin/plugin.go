@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/robogg133/MoonMS/internal/shared"
+	"github.com/robogg133/MoonMS/internal/shared/plataforms"
 )
 
 type State uint8
@@ -100,12 +100,12 @@ func (pl *Plugin) mkdirPluginFolderStructure() {
 	if err := os.Mkdir(filepath.Join(pl.MyFolder, ".objects"), 0755); err != nil {
 		panic(err)
 	}
-	shared.SetHidden(filepath.Join(pl.MyFolder, ".objects"))
+	plataforms.SetHidden(filepath.Join(pl.MyFolder, ".objects"))
 
 	if err := os.Mkdir(filepath.Join(pl.MyFolder, ".data"), 0755); err != nil {
 		panic(err)
 	}
-	shared.SetHidden(filepath.Join(pl.MyFolder, ".data"))
+	plataforms.SetHidden(filepath.Join(pl.MyFolder, ".data"))
 
 }
 

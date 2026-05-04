@@ -1,6 +1,6 @@
 //go:build !windows
 
-package app
+package plataforms
 
 // enable Do nothing
-func enable() {}
+func EnableANSII() {}

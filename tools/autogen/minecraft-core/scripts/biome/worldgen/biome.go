@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/robogg133/MoonMS/data"
+	"github.com/robogg133/MoonMS/internal/shared/data"
 )
 
 type RawBiome struct {
@@ -114,7 +114,7 @@ func NewBiomeFileWriter(w io.Writer, mcVer string) BiomeFileWriter {
 // Generated for Minecraft %s
 package worldgen
 
-import "github.com/robogg133/MoonMS/data"
+import "github.com/robogg133/MoonMS/internal/shared/data"
 
 type Biome struct {
 		Carvers  []string

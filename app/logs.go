@@ -8,6 +8,8 @@ import (
 	"path/filepath"
 	"strings"
 	"time"
+
+	"github.com/robogg133/MoonMS/internal/shared/plataforms"
 )
 
 type PluginWriter struct {
@@ -78,7 +80,7 @@ func (s *Server) LogPlugin(pluginName string, args ...any) {
 
 func (s *Server) StartLogger() error {
 
-	enable()
+	plataforms.EnableANSII()
 
 	_ = os.MkdirAll(filepath.Dir(s.Config.LatestLogFile), 0755)
 

@@ -3,7 +3,7 @@ package parser
 import (
 	"encoding/json"
 
-	"github.com/robogg133/MoonMS/data"
+	"github.com/robogg133/MoonMS/internal/shared/data"
 )
 
 func decodeEffect_WaterColor(a json.RawMessage) (Attribute, error) {

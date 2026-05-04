@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/robogg133/MoonMS/data"
+	"github.com/robogg133/MoonMS/internal/shared/data"
 	parser "github.com/robogg133/MoonMS/tools/autogen/minecraft-core/helper"
 	"github.com/robogg133/MoonMS/tools/autogen/minecraft-core/scripts/biome/worldgen"
 )
