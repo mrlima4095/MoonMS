@@ -17,7 +17,7 @@ import (
 func main() {
 
 	if slices.Contains(os.Args, "--version") {
-		fmt.Printf("MoonMS r%d-mc%s %s/%s\n", 1, "26.1.2", runtime.GOOS, runtime.GOARCH)
+		fmt.Printf("MoonMS r%d-mc%s %s/%s (Developer build)\n", 1, "26.1.2", runtime.GOOS, runtime.GOARCH)
 		return
 	}
 
